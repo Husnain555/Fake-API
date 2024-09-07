@@ -107,3 +107,94 @@
 // }
 // console.log(`my first name is ${a.name},my last name is ${a.lastName}`)
 //
+// spreed?
+// let a = [1,2,3,4,5,6,7]
+// let b = [...a,8,9,10]
+// console.log(b)
+// // rest??
+// function lol (...argu){
+//     let total = 0;
+//     for (let i of argu){
+//         total += i;
+//     }
+//     console.log(total);
+//     console.log(...argu)
+// }
+//
+//
+// lol (1,2,3,4,5,6);
+//
+// function lol2 (...argu1){
+//     let total1 = 0
+//     for (let i of argu1){
+//         total1 += i;
+//         console.log(total1)
+//     }
+// }
+//
+//
+// lol2(1,2,3,4,5,6,2,3,4,44,5,4,434,3,43,4,3,4,34,3,4,3,43);
+// call method
+
+let user = {
+    username: 'husnain',
+    userLastname: 'babar',
+    desigination: 'learner',
+    city: 'lahore',
+}
+const output = function details(background) {
+    console.log(this.username + ' ' + this.userLastname + ' ' + this.desigination + ' ' + this.city + ' ' + background)
+}
+output.call(user);
+
+let user1 = {
+    username: 'awais',
+    userLastname: 'ismail',
+    desigination: 'software engineer',
+    city: 'lahore',
+}
+output.call(user1, 'sahiwal')
+// apply?
+
+
+
+let user2 = {
+    username: 'zaman',
+    userLastname: 'ismail',
+    desigination: 'data entry',
+    city: 'lahore',
+}
+output.apply(user2,['sahiwal']);
+
+
+let user4 = {
+    username: 'ismail',
+    userLastname: 'rehmat ali',
+    desigination: 'driver',
+    city: 'lahore',
+}
+
+output.apply(user4,['sahiwal']);
+
+// bind?
+// its same like  call method but we can store value  to invoked later
+let user5 = {
+    username: 'aliza',
+    userLastname: 'husnain',
+    desigination: 'studeny',
+    city: 'lahore',
+
+}
+let input =  output.bind(user5);
+input();
+
+let user6    = {
+    username: 'maida',
+    userLastname: 'husnain',
+    desigination: 'not studying',
+    city: 'lahore',
+
+}
+
+let imput = output.bind(user6)
+imput('sahiwal');

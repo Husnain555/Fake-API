@@ -196,5 +196,9 @@ let user6    = {
 
 }
 
-let imput = output.bind(user6)
-imput('sahiwal');
+// let imput = output.bind(user6)
+// imput('sahiwal');
+output.prototype = user6
+// output();
+new  output();
+// console.log(newout)

@@ -1,10 +1,12 @@
+import {Link} from "react-router-dom";
+
 export const Card = (props) => (
-    <div className="card">
-        <img className="card-img" src={props.src} alt="" />
-        <h1>
-            {props.id}
-        </h1>
-        <p>{props.description}</p>
-        <h5>{props.price}</h5>
+    <div className='w-[500px] h-[350px] text-wrap justify-center text-center mt-[200px]'>
+
+        <img className="w-[300px] h-[300px]  text-center flex justify-center " src={props.image} alt="" />
+
+        <p className='font-bold line-clamp-3  w-[300px] '>{props.description}</p>
+        <h5 className='border-2 border-[blue] hover:bg-[pink] cursor-pointer w-[100px] ml-[100px] mt-[25px]'>{ props.price}$</h5>
+        <Link to={`/product/${props.id}`}>{props.id}</Link>
     </div>
 )

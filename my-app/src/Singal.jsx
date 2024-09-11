@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
 import {Card2} from "./card2";
-import {useParams} from "react-router-dom";
+import {redirect, useParams} from "react-router-dom";
 
 export function Singal(props) {
 
@@ -10,9 +10,12 @@ export function Singal(props) {
     const {id} = useParams()
 
     async function get (){
-        const responce = await axios.get(`https://fakestoreapi.com/products/${id}`)
-        setValue(responce.data)
-        console.log(responce.data)
+        try {
+            const responce = await axios.get(`https://fakestoreapi.com/products/${id}`)
+            setValue(responce.data)
+            console.log(responce.data)
+        }catch (e) {
+        }
     }
     useEffect(()=>{
         get();

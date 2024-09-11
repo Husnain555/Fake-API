@@ -16,6 +16,7 @@ export function Navbar() {
                     <a href={"/"} className='border-2 mr-4 border-[blue] hover:bg-[pink] cursor-pointer'>Home</a>
                     <a href={'/categories'} className='border-2 mr-4 border-[blue] hover:bg-[pink] cursor-pointer'>categories</a>
                     <a className='border-2 mr-4 border-[blue] hover:bg-[pink] cursor-pointer'>contact Us</a>
+                    <a className='border-2 mr-4 border-[blue] hover:bg-[pink] cursor-pointer' href={'/add-product'}>Add Product</a>
                 </div>
 
             </div>

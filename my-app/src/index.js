@@ -10,11 +10,16 @@ import {Card2} from "./card2";
 import {Card} from "./card";
 import {Categories} from "./categories";
 import {GetByCat} from "./getallcat";
+import {SubmitData} from "./Submit Data";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Geting/>
+    },
+    {
+        path: "/404",
+        element: <div>Item Not Found 404 <a href="/">Go to Home</a></div>
     },
     {
         path: "/products",
@@ -30,6 +35,14 @@ const router = createBrowserRouter([
     {
         path:'/all-categories' ,
         element:<GetByCat/>
+    },
+    {
+        path:'/all-categories/:id',
+        element:<GetByCat/>
+    },
+    {
+        path:'/add-product',
+        element:<SubmitData/>
     }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

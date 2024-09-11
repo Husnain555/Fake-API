@@ -17,6 +17,11 @@ export function Singal(props) {
         }catch (e) {
         }
     }
+    const delete1 = async ()=>{
+        const data = await axios.delete(`https://fakestoreapi.com/products/${id}`)
+        console.log(data.data)
+    }
+
     useEffect(()=>{
         get();
     },[])
@@ -28,9 +33,10 @@ export function Singal(props) {
             <h1 className='font-bold '>{value.title}</h1>
             <p className='line-clamp-2'>{value.description}</p>
             <h3 className='border-4 w-[25%] text-center ml-[30%]'>{value.price}$</h3>
+            <button onClick={delete1} className='border-2 border-[pink] ml-[70px] mt-4 w-[100px] h-[50px] cursor-pointer hover:bg-[pink]'>Delete</button>
+
         </div>
     )
-
 
 
 }

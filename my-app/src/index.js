@@ -11,6 +11,7 @@ import {Card} from "./card";
 import {Categories} from "./categories";
 import {GetByCat} from "./getallcat";
 import {SubmitData} from "./Submit Data";
+import {Cart} from "./cart-item";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
     {
         path:'/add-product',
         element:<SubmitData/>
+    },
+    {
+        path:'/cart',
+        element:<Cart/>
     }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

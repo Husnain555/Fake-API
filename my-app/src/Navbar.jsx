@@ -9,7 +9,13 @@ export function Navbar() {
                     <img className='w-[60px] h-[60px] ml-3 rounded-2xl' src={photo} alt='Manna Store'/>
                 </div>
                 <div className='text-2xl'>
-                    <FaShoppingCart/>
+
+<a href={'/Cart'}>
+    <  FaShoppingCart />
+
+</a>
+
+
 
                 </div>
                 <div className='gap-3 mr-3 text-2xl '>

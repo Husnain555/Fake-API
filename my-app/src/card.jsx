@@ -7,6 +7,7 @@ export const Card = (props) => (
 
         <p className='font-bold line-clamp-3  w-[300px] '>{props.description}</p>
        <h4>{props.key}</h4>
+        <h5>{props.loo}</h5>
         <h5 className='border-2 border-[blue] hover:bg-[pink] cursor-pointer w-[100px] ml-[100px] mt-[25px]'>{ props.price}$</h5>
         <Link to={`/product/${props.id}`}>{props.id}</Link>
         {/*<Link to={`/all-categories/${props.item}`}>{props.key}</Link>*/}

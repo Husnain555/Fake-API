@@ -22,7 +22,7 @@ return (
         <div>
             {value.map((item1)=>{
                 return <Card
-                    key={item1.id} title={item1.title} image={item1.image}/>
+                    key={item1.id} description={item1.userid} loo={ item1.date} />
 
             })}
 
